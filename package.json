@@ -1,0 +1,15 @@
+{
+  "name": "shophub-monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"server,frontend\" -c \"blue,green\" \"npm --prefix server run dev\" \"npm --prefix frontend start\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:frontend": "npm --prefix frontend start",
+    "start": "concurrently -n \"server,frontend\" -c \"blue,green\" \"npm --prefix server start\" \"npm --prefix frontend start\"",
+    "install:all": "npm --prefix server install && npm --prefix frontend install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
+
